@@ -1,0 +1,44 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{enumitem}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Задание №2. Теоремы об исчислении высказываний. Знакомство с интуиционистским исчислением высказываний.}
+\begin{enumerate}
+
+\item Только для очной практики, сорян :(
+\item Обозначим $A = \alpha \rightarrow (\beta \rightarrow  \gamma), 
+B = (\alpha \rightarrow \beta) \rightarrow  \gamma$ \\
+По Теореме о полноте исчисления высказываний если $ \models A \rightarrow B $, то 
+$ \vdash A \rightarrow B $ и если $ \models B \rightarrow A $, то 
+$ \vdash B \rightarrow A $ \\
+Построим таблицу истинности:\\
+\begin{center}
+\begin{tabular}{ c c c | c c c c c c }
+ $ \alpha $ & $ \beta $ & $ \gamma $ & $ \beta \rightarrow  \gamma $ & $ \alpha \rightarrow \beta $ & $ \alpha \rightarrow (\beta \rightarrow  \gamma) $ & $ (\alpha \rightarrow \beta) \rightarrow  \gamma $ & $ A \rightarrow B$ & $ B \rightarrow A $ \\ 
+ \hline
+ Л & Л & Л & И & И & И & Л & Л & И\\
+Л & Л & И & И & И & И & И & И & И\\
+Л & И & Л & Л & И & И & Л & Л & И\\
+Л & И & И & И & И & И & И & И & И\\
+И & Л & Л & И & Л & И & И & И & И\\
+И & Л & И & И & Л & И & И & И & И\\
+И & И & Л & Л & И & Л & Л & И & И\\
+И & И & И & И & И & И & И & И & И
+\end{tabular}
+\end{center}
+
+Получили, что $ \models B \rightarrow A $, тогда $ \vdash B \rightarrow A $, то есть 
+$ \vdash ((\alpha \rightarrow \beta) \rightarrow  \gamma) \rightarrow (\alpha \rightarrow (\beta \rightarrow  \gamma))$
+
+\item Доказать, что если $ \Gamma \models \alpha $, то $ \Gamma \vdash \alpha $
+\item Доказать, что если $ \Gamma \vdash \alpha $, то $ \Gamma  \models \alpha $
+
+\end{enumerate}
+
+\end{document}
